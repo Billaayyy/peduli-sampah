@@ -30,6 +30,19 @@ body {
     box-sizing: border-box;
 }
 
+.join-btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    z-index: 1001;
+    position: relative;
+}
+
 .join-section.visible {
     opacity: 1;
     transform: translateY(0);
