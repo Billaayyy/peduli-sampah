@@ -1,0 +1,22 @@
+[
+    {
+        "type": "Offline",
+        "title": "A New Start: <br>Implementation",
+        "description": "Belajar untuk lebih peduli dengan linkungan sekitar dengan transformasi yang dipersembahkan oleh tim Peduli Sampah.",
+        "footer": [
+            "Knowledge <strong>Growth</strong>",
+            "<strong>Easy</strong> Interaction"
+        ],
+        "link": "#"
+    },
+    {
+        "type": "Online",
+        "title": "Challenge:<br>Tumbler Day!",
+        "description": "Mengikuti gerakan anti-plastik, dan mulai beralih dengan menggunakan Tumbler konsisten setiap hari. Unggah perjalananmu dan dapatkan hadiah!.",
+        "footer": [
+            "Include <strong>Prizepool</strong>",
+            "<strong>Strong</strong> Commitment"
+        ],
+        "link": "#"
+    }
+]
