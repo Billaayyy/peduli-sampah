@@ -36,3 +36,20 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(contentSection);
     }
 });
+
+// Mobile hamburger menu
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+    });
+    // Optional: close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+});
