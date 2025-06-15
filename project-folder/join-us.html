@@ -8,17 +8,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Pacifico&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="joinus-style.css">
-        </head>
-
+    </head>
     <body>
-        <nav class="navbar">
+        <header class="navbar">
             <a href="../index.html" class="logo">Peduli Sampah</a>
-            <div class="nav-links">
+            <nav class="nav-links" id="navLinks">
                 <a href="../about.html">About</a>
                 <a href="#">Blog</a>
-                <a href="join-us.html" class="join-btn">Join us</a>
-            </div>
-        </nav>
+                <a href="join-us.html" class="learn-more-btn">Join us</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
         
         <section class="join-section">
             <h1>JOIN US!</h1>
@@ -27,6 +31,20 @@
             <div class="events-container card-container"></div>
         </section>
 
+        <footer class="footer">
+            <div class="footer-content">
+                <h2>Peduli Sampah</h2>
+                <p>Making Indonesia greener, one step at a time.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Peduli Sampah. All rights reserved.</p>
+            </div>
+        </footer>
         <script src="load-events.js"></script>
         <script src="join-script.js"></script>
     </body>

@@ -23,4 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (joinSection) {
         observer.observe(joinSection);
     }
+
+    // Hamburger menu toggle for mobile
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
 });

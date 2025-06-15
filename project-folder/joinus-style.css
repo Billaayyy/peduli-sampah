@@ -30,7 +30,7 @@ body {
     box-sizing: border-box;
 }
 
-.join-btn {
+.learn-more-btn {
     display: inline-block;
     background-color: white;
     color: black;
@@ -119,6 +119,30 @@ body {
     text-decoration: none;
     z-index: 1001;
     position: relative;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
 }
 
 /* EVENTS CARD */
@@ -255,10 +279,147 @@ body {
 }
 
 /* RESPONSIVE */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 15px 10px;
+    }
+    .logo {
+        font-size: 1.1rem;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        height: 100vh;
+        width: 70vw;
+        background: rgba(0,0,0,0.97);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 80px 30px 30px 30px;
+        transition: right 0.3s;
+        z-index: 1050;
+    }
+    .nav-links.open {
+        right: 0;
+    }
+    .nav-links a {
+        width: 100%;
+        padding: 18px 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-radius: 0;
+        text-align: left;
+    }
+    .learn-more-btn {
+        margin-top: 20px;
+        width: 100%;
+        text-align: left;
+    }
+    .hamburger {
+        display: flex;
+    }
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* General mobile optimization */
 @media (max-width: 760px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
+    }
+    .logo {
+        font-size: 1rem;
+        padding: 0;
+    }
+    .nav-links {
+        width: 80vw;
+        min-width: 180px;
+        padding-top: 60px;
+    }
+    .nav-links a {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 1rem;
+        box-sizing: border-box;
+        text-align: left;
+        border-radius: 0;
+        margin: 0;
+        display: block;
+    }
+    .nav-links .learn-more-btn,
+    .nav-links .joinus-btn {
+        background: none;
+        color: white;
+        border-radius: 0;
+        font-weight: 500;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        display: block;
+        text-align: left;
+        padding: 14px 0;
+    }
+    .join-section h1 {
+        font-size: 2.1rem;
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: 0.5px;
+        margin-top: -18px;
+        margin-bottom: 28px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .join-section p {
+        font-size: 0.88rem;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 38px;
+        padding-left: 6px;
+        padding-right: 6px;
+        line-height: 1.7;
+    }
     .events-container {
         flex-direction: column;
         align-items: center;
     }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 8px;
+    }
+    .footer-links {
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+    }
+    .footer-links a {
+        padding: 10px 0;
+        border: none;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+        padding-top: 8px;
+    }
+}
+
+/* Make sure buttons are always touch-friendly */
+.learn-more-btn,
+.joinus-btn {
+    min-height: 44px;
+    min-width: 44px;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 22px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }
 
