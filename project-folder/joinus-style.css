@@ -68,7 +68,6 @@ body {
 
 /* NAVBAR */
 .navbar {
-    height: 80px;
     width: 100%;
     padding: 20px 40px;
     background-color: black;
@@ -91,21 +90,30 @@ body {
 .nav-links {
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    padding: 8px 14px;
+    padding: 8px 18px;
     font-family: 'Poppins', sans-serif;
     background: none;
     cursor: pointer;
     border: none;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a:focus {
     color: white;
+    background : rgba(255,255,255,0.08);
+    outline: none;
 }
 
 .learn-more-btn {
